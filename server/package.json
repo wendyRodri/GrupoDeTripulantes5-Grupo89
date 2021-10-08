@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "ecommerce",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -28,7 +28,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "429aa732-f7c9-4a18-85e1-8f353824cb42"
+    "uuid": "e1d39c83-0d9d-4df3-8bd1-0dab4a6046fd"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",

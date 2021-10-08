@@ -14,7 +14,7 @@
         <div class="field">
           <input
             type="text"
-            placeholder="Correo eletronico"
+            placeholder="Correo electrónico"
             v-model="formData.email"
             :class="{ error: formError.email }"
           />
