@@ -10,7 +10,7 @@
 
 
 <script>
-import { ref, computed, watchEffect } from "vue";
+import { ref, computed, watchEffect, watch } from "vue";
 import { useStore } from "vuex";
 import CartHeader from './CartHeader.vue';
 import CartBody from './CartBody.vue';
@@ -27,6 +27,7 @@ export default {
     const store = useStore();
     const showCart = computed(() => store.state.showCart);
     let products = ref(null);
+    let reloadCart = ref(false);
 
     const getProductsCart = async () => {
       const response = await getProductsCartApi();
@@ -35,6 +36,7 @@ export default {
 
     watchEffect(() => {
       showCart.value;
+      reloadCart.value;
       getProductsCart();
     });
 
