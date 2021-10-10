@@ -13,7 +13,6 @@
               {{ category.title }}
             </router-link>
           </template>
-
         </router-link>
       </div>
       <div class="right menu">
@@ -24,7 +23,7 @@
         <template v-if="token">
           <router-link class="item" to="/orders">Pedidos</router-link>
           <span class="ui item cart">
-            <i class="shopping cart icon" @click="openCart"></i>
+            <i class="shopping cart icon"></i>
           </span>
           <span class="ui item logout" @click="logout">
             <i class="sign-out icon"></i>
@@ -37,8 +36,7 @@
 
 <script>
 import { ref, onMounted } from 'vue';
-import { useStore } from 'vuex';
-import { getTokenApi, deleteTokenApi } from "../api/token";
+import { getTokenApi, deleteTokenApi } from '../api/token';
 import { getCategoriesApi } from '../api/category';
 
 export default {
@@ -46,32 +44,22 @@ export default {
 
   setup() {
     let categories = ref(null);
-    const token = getTokenApi();
-    const store = useStore();
 
     onMounted(async () => {
       const response = await getCategoriesApi();
       categories.value = response;
-      console.log(response);
     });
 
-    
+    const token = getTokenApi();
 
     const logout = () => {
       deleteTokenApi();
       location.replace('/');
-      console.log("Cerrar sesión");
     };
-
-    const openCart = () => {
-      store.commit('setShowCart', true);
-    };
-
     return {
       token,
       logout,
       categories,
-      openCart,
     };
   },
 };
@@ -89,13 +77,12 @@ export default {
   .menu.left {
     width: 50%;
     .ui.image {
-      width: 70px;
+      width: 120px;
     }
   }
   .menu.right {
     width: 50%;
     justify-content: flex-end;
-
     .logout,
     .cart {
       &:hover {

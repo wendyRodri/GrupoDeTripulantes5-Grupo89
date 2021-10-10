@@ -19,10 +19,6 @@
       "type": "uid",
       "targetField": "title",
       "required": true
-    },
-    "producto": {
-      "via": "categories",
-      "model": "productos"
     }
   }
 }
