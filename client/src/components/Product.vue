@@ -28,7 +28,7 @@ export default {
     return {
       API_URL,
       addProductCartApi,
-      addProductCart
+      // addProductCart
     };
   },
 };
