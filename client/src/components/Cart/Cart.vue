@@ -5,11 +5,12 @@
   </div>
 </template>
 
+
 <script>
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 export default {
-  name: "Cart",
+  name: 'Cart',
 
   setup() {
       const store = useStore();
@@ -35,9 +36,9 @@ export default {
     width: 400px;
     height: 100vh;
     background-color: #fff;
-    box-shadow: 0px 0px 26px 5px rgba(0, 0, 9, 0.75);
-    display: fLex;
-    flex-direction: coLumn;
+    box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     transition: transform 0.9s ease;
     transform: translateX(150%);

@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    showCart: false,
+    showCart: true,
   },
   mutations: {
     setShowCart(state,payload){
