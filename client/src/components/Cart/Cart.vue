@@ -3,6 +3,7 @@
   <div class="cart" :class="{ open: showCart }">
     <div>
       <CartHeader :closeCart="closeCart" />
+      <CartBody :products="products" />
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@
 import { ref, computed, watchEffect } from "vue";
 import { useStore } from "vuex";
 import CartHeader from './CartHeader.vue';
+import CartBody from './CartBody.vue';
 import { getProductsCartApi } from '../../api/cart';
 
 export default {
   name: "Cart",
   components: {
     CartHeader,
+    CartBody,
   },
 
   setup() {
@@ -43,6 +46,7 @@ export default {
     return {
       showCart,
       closeCart,
+      products,
     };
   },
 };
