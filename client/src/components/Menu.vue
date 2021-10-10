@@ -42,7 +42,7 @@ import { getTokenApi, deleteTokenApi } from "../api/token";
 import { getCategoriesApi } from '../api/category';
 
 export default {
-  name: "Menu",
+  name: 'Menu',
 
   setup() {
     let categories = ref(null);
