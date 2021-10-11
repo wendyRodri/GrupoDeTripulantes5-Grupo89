@@ -22,7 +22,7 @@
         <tr>
           <td></td>
           <td>Total:</td>
-          <td>colspan="2">$ {{ getTotal }}</td>
+          <td colspan="2">$ {{ getTotal }}</td>
         </tr>
       </tbody>
     </table>
@@ -57,6 +57,7 @@ export default {
     //   products.value = response;
     // });
 
+//todo
     const getTotal = () => {
       let totalTemp = 0;
       products.value.forEach((product) => {
