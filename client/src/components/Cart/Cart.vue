@@ -6,7 +6,7 @@
       <CartBody :products="products" :reloadCartFn="reloadCartFn"/>
     </div>
 
-    CartFooter :products="products" :closeCart="closeCart" v-if="products" />
+    <CartFooter :products="products" :closeCart="closeCart" v-if="products" />
   </div>
 </template>
 
