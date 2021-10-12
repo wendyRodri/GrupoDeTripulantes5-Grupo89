@@ -22,11 +22,14 @@
         <tr>
           <td></td>
           <td>Total:</td>
-          <td colspan="2">$ {{ getTotal }}</td>
+          <td colspan="2">$ {{ getTotal() }}</td>
         </tr>
       </tbody>
     </table>
-    <button class="ui button primary fluid">Generar Pedido</button>
+
+    <button class="ui button primary fluid">
+      Generar pedido
+    </button>
 
     <h3 v-if="!products">No tienes productos en el carrito</h3>
   </BasicLayouts>

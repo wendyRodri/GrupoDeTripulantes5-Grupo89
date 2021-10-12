@@ -78,9 +78,6 @@ export default {
   }
 }
 
-
-
-
 .cart {
   position: fixed;
   right: 0;

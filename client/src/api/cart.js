@@ -63,7 +63,7 @@ export function deleteAllProductCartApi(idProduct) {
 
     if (index > -1) {
         products.splice(index, 1);
-        localStorage.setitem(PRODUCTS, JSON.stringify(products));
+        localStorage.setItem(PRODUCTS, JSON.stringify(products));
         deleteAllProductCartApi(idProduct);
-    }
+      }
 }
