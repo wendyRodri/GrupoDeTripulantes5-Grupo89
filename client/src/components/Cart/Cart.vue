@@ -3,27 +3,35 @@
   <div class="cart" :class="{ open: showCart }">
     <div>
       <CartHeader :closeCart="closeCart" />
+      <CartBody :products="products" :reloadCartFn="reloadCartFn"/>
     </div>
+
+    <CartFooter :products="products" :closeCart="closeCart" v-if="products" />
   </div>
 </template>
 
 
 <script>
-import { ref, computed, watchEffect } from "vue";
+import { ref, computed, watchEffect, watch } from "vue";
 import { useStore } from "vuex";
 import CartHeader from './CartHeader.vue';
+import CartBody from './CartBody.vue';
+import CartFooter from './CartFooter.vue';
 import { getProductsCartApi } from '../../api/cart';
 
 export default {
   name: "Cart",
   components: {
     CartHeader,
+    CartBody,
+    CartFooter,
   },
 
   setup() {
     const store = useStore();
     const showCart = computed(() => store.state.showCart);
     let products = ref(null);
+    let reloadCart = ref(false);
 
     const getProductsCart = async () => {
       const response = await getProductsCartApi();
@@ -32,6 +40,7 @@ export default {
 
     watchEffect(() => {
       showCart.value;
+      reloadCart.value;
       getProductsCart();
     });
 
@@ -40,9 +49,15 @@ export default {
       store.commit("setShowCart", false);
     };
 
+    const reloadCartFn = () => {
+      reloadCart.value = !reloadCart.value;
+    };
+
     return {
       showCart,
       closeCart,
+      products,
+      reloadCartFn,
     };
   },
 };
@@ -62,9 +77,6 @@ export default {
     opacity: 0.7;
   }
 }
-
-
-
 
 .cart {
   position: fixed;

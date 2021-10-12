@@ -1,9 +1,12 @@
 <template>
   <BasicLayouts>
     <div class="ui grid">
-      <div class="sixten wide mobile eight wide tablet four wide Computer column"
-      v-for="product in products" :key="product.id">
-      <Product :product="product" />
+      <div
+        class="sixten wide mobile eight wide tablet four wide computer column"
+        v-for="product in products"
+        :key="product.id"
+      >
+        <Product :product="product" />
       </div>
     </div>
   </BasicLayouts>
