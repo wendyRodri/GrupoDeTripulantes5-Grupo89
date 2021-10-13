@@ -5,7 +5,8 @@ import Register from '../views/Register.vue'
 import Category from '../views/Category.vue'
 import Cart from '../views/Cart.vue'
 import Nosotros from '../views/Nosotros.vue'
-import Contáctenos from '../views/Contáctenos.vue'
+//import Contactenos from '../views/Contáctenos.vue'
+//import GoogleMap from '../views/GoolgeMap.vue'
 
 const routes = [
   {
@@ -19,12 +20,18 @@ const routes = [
     component: Nosotros
 
   },
-  {
-    path: "/contáctenos",
-    name: "Contáctenos",
-    component: Contáctenos
+  // {
+  //   path: "/googleMap",
+  //   name: "GoogleMap",
+  //   component: GoogleMap
 
-  },
+  // },
+  // {
+  //   path: "/contáctenos",
+  //   name: "Contáctenos",
+  //   component: Contactenos
+
+  // },
   {
     path: "/login",
     name: "login",
