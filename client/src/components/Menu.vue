@@ -8,6 +8,7 @@
             src="../assets/logo.png"
             alt="Ecommerce"
           />
+
           <div class="ui compact menu">
             <div class="ui simple dropdown item">
               Productos
@@ -22,11 +23,6 @@
             </div>
           </div>
         </router-link>
-      </div>
-      <div>
-        <p>
-          opcion1
-        </p>
       </div>
 
       <div class="right menu">
