@@ -5,6 +5,7 @@ import Register from '../views/Register.vue'
 import Category from '../views/Category.vue'
 import Cart from '../views/Cart.vue'
 import Nosotros from '../views/Nosotros.vue'
+import Contáctenos from '../views/Contáctenos.vue'
 
 const routes = [
   {
@@ -16,6 +17,12 @@ const routes = [
     path: "/nosotros",
     name: "Nosotros",
     component: Nosotros
+
+  },
+  {
+    path: "/contáctenos",
+    name: "Contáctenos",
+    component: Contáctenos
 
   },
   {
