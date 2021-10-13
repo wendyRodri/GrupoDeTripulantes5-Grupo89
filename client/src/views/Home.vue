@@ -1,24 +1,26 @@
 <template>
   <BasicLayouts>
-    <h1>Últimos productos</h1>
+    <body>
+      <h1>Últimos productos</h1>
 
-    <!--button-->
-    <button class="ui primary button">
-      Save
-    </button>
-    <button class="ui button">
-      Discard
-    </button>
+      <!--button-->
+      <button class="ui primary button">
+        Save
+      </button>
+      <button class="ui button">
+        Discard
+      </button>
 
-    <div class="ui grid">
-      <div
-        class="sixten wide mobile eight wide"
-        v-for="product in products"
-        :key="product.id"
-      >
-        <Product :product="product" />
+      <div class="ui grid">
+        <div
+          class="sixten wide mobile eight wide"
+          v-for="product in products"
+          :key="product.id"
+        >
+          <Product :product="product" />
+        </div>
       </div>
-    </div>
+    </body>
   </BasicLayouts>
 </template>
 
@@ -49,3 +51,8 @@ export default {
   },
 };
 </script>
+<style>
+.body {
+  background-image: url();
+}
+</style>
