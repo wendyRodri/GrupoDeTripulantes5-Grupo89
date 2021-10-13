@@ -8,14 +8,23 @@
             src="../assets/logo.png"
             alt="Ecommerce"
           />
-          <template v-for="category in categories" :key="category.id">
-            <router-link class="item" :to="category.slug">
-              {{ category.title }}
-            </router-link>
-          </template>
 
+          <div class="ui compact menu">
+            <div class="ui simple dropdown item">
+              Productos
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <template v-for="category in categories" :key="category.id">
+                  <router-link class="item" :to="category.slug">
+                    {{ category.title }}
+                  </router-link>
+                </template>
+              </div>
+            </div>
+          </div>
         </router-link>
       </div>
+
       <div class="right menu">
         <router-link class="item" to="/login" v-if="!token">
           Iniciar Sesión
@@ -36,13 +45,13 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
-import { useStore } from 'vuex';
+import { ref, onMounted } from "vue";
+import { useStore } from "vuex";
 import { getTokenApi, deleteTokenApi } from "../api/token";
-import { getCategoriesApi } from '../api/category';
+import { getCategoriesApi } from "../api/category";
 
 export default {
-  name: 'Menu',
+  name: "Menu",
 
   setup() {
     let categories = ref(null);
@@ -55,16 +64,14 @@ export default {
       console.log(response);
     });
 
-    
-
     const logout = () => {
       deleteTokenApi();
-      location.replace('/');
+      location.replace("/");
       console.log("Cerrar sesión");
     };
 
     const openCart = () => {
-      store.commit('setShowCart', true);
+      store.commit("setShowCart", true);
     };
 
     return {
