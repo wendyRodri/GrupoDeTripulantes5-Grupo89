@@ -24,5 +24,8 @@ export default {
 </script>
 
 <style>
-
+.basic-layout{
+    background-image: url("../assets/bg2.jpg") ;
+    
+}
 </style>

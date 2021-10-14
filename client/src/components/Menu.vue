@@ -86,9 +86,9 @@ export default {
 
 <style lang="scss" scoped>
 .ui.menu.secondary {
-  background-color: #16202b;
+  background-color: #0a1f22;
   .item {
-    color: #ffffff;
+    color: #6da7e9;
     &:hover {
       color: #1fa1f1;
     }
@@ -109,6 +109,12 @@ export default {
         cursor: pointer;
       }
     }
+  }
+}
+.ui.compact {
+  .dropdown {
+    color: #756c6c;
+
   }
 }
 </style>
